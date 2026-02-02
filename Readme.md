@@ -1,0 +1,3 @@
+# NTP-Synchronized Clock
+
+This Rust project implements a simple NTP-synchronized clock. It defines a `Clock` struct that fetches time from NTP servers (like Google or Cloudflare) on initialization and periodically updates it every 10 seconds in a background thread. It uses `chrono` for date/time handling and `std::time::Instant` to track elapsed time since the last sync, allowing accurate current time calculation even between NTP fetches. If NTP fails, it falls back to a default epoch time. The main loop prints the current time every second, demonstrating real-time synchronization.
