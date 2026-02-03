@@ -183,14 +183,14 @@ impl Clock {
             info!("Initialized time from default to NTP time");
         } else {
             // Calculate drift and update time
-            let expected_time = self.get_current_time();
-            let drift = new_time.signed_duration_since(expected_time);
+            // let expected_time = self.get_current_time();
+            // let drift = new_time.signed_duration_since(expected_time);
 
-            if drift.num_milliseconds().abs() > 100 {
-                info!("Correcting time drift: {} ms", drift.num_milliseconds());
-                self.latest_time = new_time;
-                self.latest_instant = Instant::now();
-            }
+            // if drift.num_milliseconds().abs() > 100 {
+            //     info!("Correcting time drift: {} ms", drift.num_milliseconds());
+            //     self.latest_time = new_time;
+            //     self.latest_instant = Instant::now();
+            // }
         }
     }
 
