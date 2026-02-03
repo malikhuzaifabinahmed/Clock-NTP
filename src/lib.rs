@@ -47,7 +47,7 @@ pub struct Clock {
     latest_time_ntp: Option<DateTime<Utc>>,
     latest_time: DateTime<Utc>,
     pub latest_instant: Instant,
-    ntp_servers: Vec<String>,
+    pub ntp_servers: Vec<String>,
     stats: SyncStats,
 }
 

@@ -1,5 +1,13 @@
-# Example configuration file for Clock-NTP
-# This is a future feature - not yet implemented in the current version
+# Example Configuration File for Clock-NTP
+# 
+# NOTE: Configuration file support is PLANNED but NOT YET IMPLEMENTED
+# This file serves as a design document for future configuration file feature.
+# Currently, all configuration must be done via command-line arguments.
+# See README.md for command-line usage.
+#
+# Planned for future version: The application will support reading settings
+# from a TOML configuration file at ~/.config/clock-ntp/config.toml or
+# a path specified via --config flag.
 
 [ntp]
 # List of NTP servers to use
@@ -26,5 +34,5 @@ show_stats = false
 # Log level: error, warn, info, debug, trace
 level = "info"
 
-# Log to file
+# Log to file (optional)
 log_file = "/var/log/clock-ntp.log"
