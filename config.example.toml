@@ -1,0 +1,30 @@
+# Example configuration file for Clock-NTP
+# This is a future feature - not yet implemented in the current version
+
+[ntp]
+# List of NTP servers to use
+servers = [
+    "time.google.com:123",
+    "time.cloudflare.com:123",
+    "pool.ntp.org:123"
+]
+
+# Update interval in seconds
+update_interval = 10
+
+[display]
+# Display interval in seconds
+interval = 1
+
+# Timezone offset in hours from UTC
+timezone_offset = 0
+
+# Show statistics
+show_stats = false
+
+[logging]
+# Log level: error, warn, info, debug, trace
+level = "info"
+
+# Log to file
+log_file = "/var/log/clock-ntp.log"
