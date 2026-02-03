@@ -1,0 +1,38 @@
+# Example Configuration File for Clock-NTP
+# 
+# NOTE: Configuration file support is PLANNED but NOT YET IMPLEMENTED
+# This file serves as a design document for future configuration file feature.
+# Currently, all configuration must be done via command-line arguments.
+# See README.md for command-line usage.
+#
+# Planned for future version: The application will support reading settings
+# from a TOML configuration file at ~/.config/clock-ntp/config.toml or
+# a path specified via --config flag.
+
+[ntp]
+# List of NTP servers to use
+servers = [
+    "time.google.com:123",
+    "time.cloudflare.com:123",
+    "pool.ntp.org:123"
+]
+
+# Update interval in seconds
+update_interval = 10
+
+[display]
+# Display interval in seconds
+interval = 1
+
+# Timezone offset in hours from UTC
+timezone_offset = 0
+
+# Show statistics
+show_stats = false
+
+[logging]
+# Log level: error, warn, info, debug, trace
+level = "info"
+
+# Log to file (optional)
+log_file = "/var/log/clock-ntp.log"
